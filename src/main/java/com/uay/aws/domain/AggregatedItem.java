@@ -2,42 +2,54 @@ package com.uay.aws.domain;
 
 public class AggregatedItem {
 
-    private String text;
-    private Long count;
+    private String itemName;
+    private Long quantity;
+    private Long bought;
+    private Long reserved;
 
     public AggregatedItem() {
     }
 
-    public AggregatedItem(String text, Long count) {
-        this.text = text;
-        this.count = count;
+    public AggregatedItem(String itemName, Long quantity, Long bought, Long reserved) {
+        this.itemName = itemName;
+        this.quantity = quantity;
+        this.bought = bought;
+        this.reserved = reserved;
     }
 
-    public AggregatedItem(String text, String count) {
-        this(text, Long.valueOf(count));
+    public AggregatedItem(String itemName, String quantity, String bought, String reserved) {
+        this(itemName, Long.valueOf(quantity), Long.valueOf(bought), Long.valueOf(reserved));
     }
 
-    public String getText() {
-        return text;
+    public String getItemName() {
+        return itemName;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
     }
 
-    public Long getCount() {
-        return count;
+    public Long getQuantity() {
+        return quantity;
     }
 
-    public void setCount(Long count) {
-        this.count = count;
+    public void setQuantity(Long quantity) {
+        this.quantity = quantity;
     }
 
-    @Override
-    public String toString() {
-        return "AggregatedItem{" +
-                "text='" + text + '\'' +
-                ", count=" + count +
-                '}';
+    public Long getBought() {
+        return bought;
+    }
+
+    public void setBought(Long bought) {
+        this.bought = bought;
+    }
+
+    public Long getReserved() {
+        return reserved;
+    }
+
+    public void setReserved(Long reserved) {
+        this.reserved = reserved;
     }
 }

@@ -18,8 +18,9 @@ public class GatewayGetAllCommandEventHandler implements RequestHandler<Object, 
         logger.log("event = " + event.toString());
 
         List<AggregatedItem> aggregatedItems = dynamoDbService.retrieveItem();
-        System.out.println("aggregatedItems = " + aggregatedItems);;
+        logger.log("aggregatedItems = " + aggregatedItems);;
 
+        logger.log("Finished CQRS query");
         return aggregatedItems;
     }
 }
