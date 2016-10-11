@@ -52,4 +52,14 @@ public class AggregatedItem {
     public void setReserved(Long reserved) {
         this.reserved = reserved;
     }
+
+    @Override
+    public String toString() {
+        return "AggregatedItem{" +
+                "itemName='" + itemName + '\'' +
+                ", quantity=" + quantity +
+                ", bought=" + bought +
+                ", reserved=" + reserved +
+                '}';
+    }
 }
